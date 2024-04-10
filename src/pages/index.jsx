@@ -13,21 +13,33 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <BackgroundImage src="/homePic.jpeg" h={"70vh"} w={"100%"}>
-        <AppLayout withHeaderBorder={false}>
-          <Flex
-            direction={"column"}
-            h={"40vh"}
-            align={"center"}
-            justify={"center"}
-          >
-            <Text fw={800} size="xl">
-              Discover Sicilian Experiences: Find Local Adventures in Your City
-            </Text>
+        <Flex
+          direction={"column"}
+          h={"100%"}
+          w={"100%"}
+          bg={"rgba(0, 0, 0, 0.5"}
+        >
+          <AppLayout withHeaderBorder={false}>
+            <Flex
+              direction={"column"}
+              h={"40vh"}
+              align={"center"}
+              justify={"center"}
+            >
+              <Text fw={800} size="xl">
+                Discover Sicilian Experiences: Find Local Adventures in Your
+                City
+              </Text>
 
-            <h1> TODO SEARCH</h1>
-          </Flex>
-        </AppLayout>
+              <h1> TODO SEARCH</h1>
+            </Flex>
+          </AppLayout>
+        </Flex>
       </BackgroundImage>
+      <Space h={"xl"} />
+      <Text align={"center"} size={"xl"} fw={800}>
+        Popular Experiences
+      </Text>
       <Space h={"xl"} />
       <Slider />
       <Space h={"xl"} />
