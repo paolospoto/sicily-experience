@@ -2,7 +2,7 @@ import { BackgroundImage, Button, Center, Flex } from "@mantine/core";
 import { IconHeart, IconInfoCircleFilled } from "@tabler/icons-react";
 import React from "react";
 
-const Card = () => {
+const Card = ({ data }) => {
   return (
     <>
       {/* desktop */}
@@ -23,19 +23,19 @@ const Card = () => {
           style={{ borderRadius: "5px" }}
         >
           <Flex justify={"space-between"} align={"center"} w={"90%"}>
-            <h3>stars</h3>
+            <h3>{data.rating.$numberDecimal}</h3>
             <Button bg={"transparent"} onClick={() => console.log("preferito")}>
-              <IconHeart size={"xl"} />
+              <IconHeart size={"25px"} />
             </Button>
           </Flex>
-          <h1>TITOLO ESPERIENZA</h1>
+          <h1>{data.title}</h1>
           <Flex direction={"column"}>
             <Button
               bg={"transparent"}
               onClick={() => console.log("info")}
               mb={"sm"}
             >
-              <IconInfoCircleFilled size={"xl"} />
+              <IconInfoCircleFilled size={"25px"} />
             </Button>
             <h4>10 AM - 13 AM</h4>
           </Flex>
@@ -46,7 +46,7 @@ const Card = () => {
         hiddenFrom={"sm"}
         src={"/exp1.jpg"}
         radius={"5px"}
-        h={"250px"}
+        h={"300px"}
         w={"350px"}
       >
         <Flex
@@ -59,12 +59,12 @@ const Card = () => {
           style={{ borderRadius: "5px" }}
         >
           <Flex justify={"space-between"} align={"center"} w={"90%"}>
-            <h3>stars</h3>
+            <h3>{data.rating.$numberDecimal}</h3>
             <Button bg={"transparent"} onClick={() => console.log("preferito")}>
               <IconHeart size={"25px"} />
             </Button>
           </Flex>
-          <h3>TITOLO ESPERIENZA</h3>
+          <h3>{data.title}</h3>
           <Flex direction={"column"}>
             <Button
               bg={"transparent"}

@@ -26,7 +26,7 @@ const Slider = () => {
     // </Carousel>
     <Swiper
       style={{ margin: "0 10px" }}
-      spaceBetween={-100}
+      spaceBetween={100}
       slidesPerView={1.6}
       pagination={{ clickable: true }}
       speed={600}

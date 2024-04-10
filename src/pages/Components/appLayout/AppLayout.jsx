@@ -1,4 +1,12 @@
-import { AppShell, Burger, Button, Flex, Image, Text } from "@mantine/core";
+import {
+  AppShell,
+  Burger,
+  Button,
+  Flex,
+  Image,
+  Space,
+  Text,
+} from "@mantine/core";
 // import { Image } from "next/image";
 import { useDisclosure } from "@mantine/hooks";
 import { useHeadroom } from "@mantine/hooks";
@@ -69,9 +77,10 @@ const AppLayout = ({ children, withHeaderBorder }) => {
 
       <AppShell.Main>{children}</AppShell.Main>
       <AppShell.Footer withBorder={false} bg={"transparent"}>
-        {/* desktop */}
-        <Text visibleFrom="md">Desktop Footer</Text>
+        {/* desktop
+        <Text visibleFrom="md">Desktop Footer</Text> */}
         {/* mobile */}
+
         <Flex
           hiddenFrom="sm"
           justify="center"

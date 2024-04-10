@@ -1,9 +1,19 @@
 import Head from "next/head";
 import AppLayout from "./Components/appLayout";
-import { BackgroundImage, Center, Flex, Space, Text } from "@mantine/core";
+import {
+  BackgroundImage,
+  Button,
+  Center,
+  Flex,
+  Space,
+  Text,
+} from "@mantine/core";
 import Slider from "./Components/slider";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <>
       <Head>
@@ -44,6 +54,15 @@ export default function Home() {
       <Slider />
       <Space h={"xl"} />
       <Space h={"xl"} />
+      <Center w={"100%"}>
+        <Button
+          align={"center"}
+          onClick={() => router.push("/experiences")}
+          color={"purple"}
+        >
+          View All
+        </Button>
+      </Center>
       <Space h={"xl"} />
       <Space h={"xl"} />
     </>
