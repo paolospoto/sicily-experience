@@ -15,10 +15,12 @@
     "@mantine/hooks": "^7.7.1",
     "@mantine/modals": "^7.7.1",
     "@tabler/icons-react": "^3.1.0",
-    "embla-carousel-react": "^8.0.2",
+    "embla-carousel-react": "^7.1.0",
     "next": "14.1.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "swiper": "^11.1.1",
+    "swiper-react": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "^8",

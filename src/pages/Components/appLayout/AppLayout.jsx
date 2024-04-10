@@ -1,11 +1,14 @@
 import { AppShell, Burger, Button, Flex, Image, Text } from "@mantine/core";
 // import { Image } from "next/image";
 import { useDisclosure } from "@mantine/hooks";
+import { useHeadroom } from "@mantine/hooks";
+
 import Navigation from "../navigation";
 
 // import Navigation from "./Navigation";
 
-const AppLayout = ({ children }) => {
+const AppLayout = ({ children, withHeaderBorder }) => {
+  const pinned = useHeadroom({ fixedAt: 10 });
   // const [opened, { toggle }] = useDisclosure();
 
   return (
@@ -14,7 +17,19 @@ const AppLayout = ({ children }) => {
       header={{ height: 80 }}
       footer={{ height: 50 }}
     >
-      <AppShell.Header bg={"transparent"}>
+      <AppShell.Header
+        bg={"transparent"}
+        withBorder={withHeaderBorder}
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+
+          transform: `translate3d(0, ${pinned ? 0 : "-110rem"}, 0)`,
+          transition: "transform 400ms ease",
+        }}
+      >
         {/* desktop */}
         <Flex
           visibleFrom={"sm"}
@@ -52,13 +67,13 @@ const AppLayout = ({ children }) => {
         <Navigation />
       </AppShell.Navbar> */}
 
-      <AppShell.Main pt={100}>{children}</AppShell.Main>
+      <AppShell.Main>{children}</AppShell.Main>
       <AppShell.Footer withBorder={false} bg={"transparent"}>
         {/* desktop */}
-        {/* <Text visibleFrom="md">Desktop Footer</Text> */}
+        <Text visibleFrom="md">Desktop Footer</Text>
         {/* mobile */}
         <Flex
-          // hiddenFrom="sm"
+          hiddenFrom="sm"
           justify="center"
           // style={{ "border-top-right": "20rem" }}
           style={{

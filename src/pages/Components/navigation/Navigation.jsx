@@ -38,6 +38,7 @@ const Navigation = ({ isMobile }) => {
           <Text
             onClick={() => router.push("/")}
             size={"lg"}
+            c={"black"}
             style={{ cursor: "pointer" }}
           >
             HOME
@@ -45,6 +46,7 @@ const Navigation = ({ isMobile }) => {
           <Text
             onClick={() => router.push("/about")}
             size={"lg"}
+            c={"black"}
             style={{ cursor: "pointer" }}
           >
             ABOUT

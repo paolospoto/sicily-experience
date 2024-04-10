@@ -1,8 +1,13 @@
 import React from "react";
 import AppLayout from "./Components/appLayout";
+import { Card } from "./Components/card";
 
 const About = () => {
-  return <AppLayout>about</AppLayout>;
+  return (
+    <AppLayout>
+      <Card />
+    </AppLayout>
+  );
 };
 
 export default About;
