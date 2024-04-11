@@ -1,5 +1,5 @@
 import Head from "next/head";
-import AppLayout from "./Components/appLayout";
+import AppLayout from "../Components/appLayout";
 import {
   BackgroundImage,
   Button,
@@ -9,7 +9,7 @@ import {
   Text,
   Image,
 } from "@mantine/core";
-import Slider from "./Components/slider";
+import Slider from "../Components/slider";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 

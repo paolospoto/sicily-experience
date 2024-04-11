@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Card } from "./Components/card";
-import AppLayout from "./Components/appLayout";
+import { Card } from "../Components/card";
+import AppLayout from "../Components/appLayout";
 import { Space, Flex, Select, TextInput, Text } from "@mantine/core";
 import Fuse from "fuse.js";
 import {
