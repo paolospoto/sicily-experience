@@ -1,5 +1,5 @@
 import { Carousel } from "@mantine/carousel";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Card } from "../card";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -7,6 +7,17 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 const Slider = () => {
+  const [popularExperiences, setPopularExperiences] = useState([]);
+  useEffect(() => {
+    fetch("/api/experiences")
+      .then((res) => res.json())
+      .then((data) => {
+        const randomExperiences = data
+          .sort(() => 0.5 - Math.random())
+          .slice(0, 9);
+        setPopularExperiences(randomExperiences);
+      });
+  }, []);
   return (
     // <Carousel
     //   align={"center"}
@@ -37,21 +48,11 @@ const Slider = () => {
       loop={true}
       modules={[Autoplay, Pagination]}
     >
-      <SwiperSlide>
-        <Card />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Card />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Card />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Card />
-      </SwiperSlide>
-      <SwiperSlide>
-        <Card />
-      </SwiperSlide>
+      {popularExperiences.map((exp) => (
+        <SwiperSlide key={exp._id}>
+          <Card data={exp} />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };

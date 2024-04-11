@@ -8,15 +8,21 @@ import {
   Text,
 } from "@mantine/core";
 // import { Image } from "next/image";
-import { useDisclosure } from "@mantine/hooks";
+import { signIn, signOut, useSession } from "next-auth/react";
 import { useHeadroom } from "@mantine/hooks";
 
 import Navigation from "../navigation";
+import { useEffect } from "react";
 
 // import Navigation from "./Navigation";
 
 const AppLayout = ({ children, withHeaderBorder }) => {
   const pinned = useHeadroom({ fixedAt: 10 });
+  const { data: session } = useSession();
+
+  useEffect(() => {
+    console.log(session);
+  }, [session]);
   // const [opened, { toggle }] = useDisclosure();
 
   return (
@@ -52,7 +58,15 @@ const AppLayout = ({ children, withHeaderBorder }) => {
 
           <Flex align={"center"} justify={"center"} h={"100%"} gap={"xl"}>
             <Navigation isMobile={false} />
-            <Button>Sign In</Button>
+
+            <Button
+              color="purple"
+              onClick={() => {
+                session ? signOut() : signIn();
+              }}
+            >
+              {session ? "SIGN OUT" : "SIGN IN"}
+            </Button>
           </Flex>
         </Flex>
 
@@ -67,7 +81,14 @@ const AppLayout = ({ children, withHeaderBorder }) => {
           pr={"xl"}
         >
           <Image src={"/logo.svg"} alt={"logo"} />
-          <Button>Sign In</Button>
+          <Button
+            color="purple"
+            onClick={() => {
+              session ? signOut() : signIn();
+            }}
+          >
+            {session ? "SIGN OUT" : "SIGN IN"}
+          </Button>
         </Flex>
       </AppShell.Header>
 
