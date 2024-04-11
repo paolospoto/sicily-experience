@@ -3,11 +3,7 @@ import AppLayout from "./Components/appLayout";
 import { Card } from "./Components/card";
 
 const About = () => {
-  return (
-    <AppLayout>
-      <Card />
-    </AppLayout>
-  );
+  return <AppLayout>About Us</AppLayout>;
 };
 
 export default About;

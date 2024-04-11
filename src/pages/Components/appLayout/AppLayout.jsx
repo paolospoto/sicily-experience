@@ -54,9 +54,15 @@ const AppLayout = ({ children, withHeaderBorder }) => {
           pl={"xl"}
           pr={"xl"}
         >
-          <Image src={"/logo.svg"} alt={"logo"} />
+          <Image src={"/logo.svg"} alt={"logo"} w={"80"} />
 
-          <Flex align={"center"} justify={"center"} h={"100%"} gap={"xl"}>
+          <Flex
+            align={"center"}
+            justify={"space-between"}
+            h={"100%"}
+            gap={"xl"}
+            w={"30%"}
+          >
             <Navigation isMobile={false} />
 
             <Button
@@ -80,7 +86,7 @@ const AppLayout = ({ children, withHeaderBorder }) => {
           pl={"xl"}
           pr={"xl"}
         >
-          <Image src={"/logo.svg"} alt={"logo"} />
+          <Image src={"/logo.svg"} alt={"logo"} w={"50"} />
           <Button
             color="purple"
             onClick={() => {

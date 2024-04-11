@@ -11,7 +11,7 @@ const Card = ({ data }) => {
         src={"/exp1.jpg"}
         radius={"5px"}
         h={"500px"}
-        w={"900px"}
+        w={"700px"}
       >
         <Flex
           h={"100%"}
@@ -46,8 +46,8 @@ const Card = ({ data }) => {
         hiddenFrom={"sm"}
         src={"/exp1.jpg"}
         radius={"5px"}
-        h={"300px"}
-        w={"350px"}
+        h={"200px"}
+        w={"250px"}
       >
         <Flex
           h={"100%"}
@@ -59,12 +59,12 @@ const Card = ({ data }) => {
           style={{ borderRadius: "5px" }}
         >
           <Flex justify={"space-between"} align={"center"} w={"90%"}>
-            <h3>{data.rating.$numberDecimal}</h3>
+            <h5>{data.rating.$numberDecimal}</h5>
             <Button bg={"transparent"} onClick={() => console.log("preferito")}>
               <IconHeart size={"25px"} />
             </Button>
           </Flex>
-          <h3>{data.title}</h3>
+          <h5>{data.title}</h5>
           <Flex direction={"column"}>
             <Button
               bg={"transparent"}

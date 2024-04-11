@@ -7,6 +7,7 @@ import {
   Flex,
   Space,
   Text,
+  Image,
 } from "@mantine/core";
 import Slider from "./Components/slider";
 import { useRouter } from "next/router";
@@ -36,13 +37,23 @@ export default function Home() {
               h={"40vh"}
               align={"center"}
               justify={"center"}
+              style={{ textAlign: "center" }}
             >
-              <Text fw={800} size="xl">
-                Discover Sicilian Experiences: Find Local Adventures in Your
-                City
-              </Text>
-
-              <h1> TODO SEARCH</h1>
+              <h1>
+                Sicily Experience <br /> Find Local Adventures in Your City
+              </h1>
+              <Image
+                visibleFrom="sm"
+                src={"/sicily.svg"}
+                alt={"logo"}
+                w={"250"}
+              />
+              <Image
+                hiddenFrom="sm"
+                src={"/sicily.svg"}
+                alt={"logo"}
+                w={"150"}
+              />
             </Flex>
           </AppLayout>
         </Flex>

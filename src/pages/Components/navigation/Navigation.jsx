@@ -1,11 +1,6 @@
 import { Flex, Text } from "@mantine/core";
 
-import {
-  IconCards,
-  IconHome,
-  IconInfoCircle,
-  IconPhotoSensor,
-} from "@tabler/icons-react";
+import { IconHome, IconInfoCircle, IconMap } from "@tabler/icons-react";
 
 import { useRouter } from "next/router";
 
@@ -22,6 +17,10 @@ const Navigation = ({ isMobile }) => {
           gap={"md"}
         >
           <IconHome onClick={() => router.push("/")} color={"black"} />
+          <IconMap
+            onClick={() => router.push("/experiences")}
+            color={"black"}
+          />
           <IconInfoCircle
             onClick={() => router.push("/about")}
             color={"black"}
@@ -43,6 +42,15 @@ const Navigation = ({ isMobile }) => {
             style={{ cursor: "pointer" }}
           >
             HOME
+          </Text>
+          <Text
+            onClick={() => router.push("/experiences")}
+            size={"lg"}
+            fw={800}
+            // c={"black"}
+            style={{ cursor: "pointer" }}
+          >
+            EXPERIENCES
           </Text>
           <Text
             onClick={() => router.push("/about")}
