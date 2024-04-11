@@ -38,7 +38,8 @@ const Slider = () => {
     <Swiper
       style={{ margin: "0 10px" }}
       spaceBetween={100}
-      slidesPerView={1.6}
+      slidesPerView={1}
+      align={"center"}
       pagination={{ clickable: true }}
       speed={600}
       autoplay={{

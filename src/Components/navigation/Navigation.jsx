@@ -38,7 +38,7 @@ const Navigation = ({ isMobile }) => {
             onClick={() => router.push("/")}
             size={"lg"}
             fw={800}
-            // c={"black"}
+            c={"black"}
             style={{ cursor: "pointer" }}
           >
             HOME
@@ -47,7 +47,7 @@ const Navigation = ({ isMobile }) => {
             onClick={() => router.push("/experiences")}
             size={"lg"}
             fw={800}
-            // c={"black"}
+            c={"black"}
             style={{ cursor: "pointer" }}
           >
             EXPERIENCES
@@ -56,7 +56,7 @@ const Navigation = ({ isMobile }) => {
             onClick={() => router.push("/about")}
             size={"lg"}
             fw={800}
-            // c={"black"}
+            c={"black"}
             style={{ cursor: "pointer" }}
           >
             ABOUT
